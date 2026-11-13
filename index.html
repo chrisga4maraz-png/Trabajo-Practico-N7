@@ -1,349 +1,92 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Registrate en Vértice Gym y comenzá a entrenar a tu manera.">
-    <meta name="theme-color" content="#080A0B">
-
-    <title>Crear cuenta | Vértice Gym</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAMEHUB | Crear cuenta</title>
+ <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <header class="topbar">
+    <a class="logo" href="#">GAME<span>HUB</span><sup>®</sup></a>
+    <span class="top-label">JUGÁ A TU MANERA.</span>
+    <a class="back-link" href="#">VOLVER AL INICIO ↗</a>
+  </header>
 
-    <header class="encabezado">
+  <main>
+    <section class="intro">
+      <div class="intro-meta">
+        <span>COMUNIDAD GAMER</span>
+        <span>BUENOS AIRES · 2026</span>
+      </div>
+      <h1>NO JUGÁS<br>SOLO<span>.</span></h1>
+      <div class="intro-bottom">
+        <p>Encontrá gente que juega<br>con la misma pasión que vos.</p>
+        <div class="sticker">TU<br>PARTIDA<br>EMPIEZA<br><b>ACÁ ↘</b></div>
+      </div>
+    </section>
 
-        <a href="index.html" class="logo" aria-label="Vértice Gym, inicio">
-            VÉRTICE<span>.</span>
-        </a>
+    <section class="signup">
+      <div class="signup-heading">
+        <div>
+          <span class="overline">01 / NUEVO JUGADOR</span>
+          <h2>CREÁ TU<br>CUENTA.</h2>
+        </div>
+        <span class="asterisk">✳</span>
+      </div>
 
-        <div class="encabezado-derecha">
-            <span class="encabezado-descripcion">GYM & FITNESS</span>
-
-            <a href="login.html" class="enlace-ingreso">
-                ¿YA TENÉS CUENTA? <span>INGRESAR ↗</span>
-            </a>
+      <form action="/registro" method="POST">
+        <div class="field">
+          <label for="usuario">NOMBRE DE USUARIO</label>
+          <input id="usuario" name="usuario" type="text" placeholder="¿Cómo te llamamos?" required>
         </div>
 
-    </header>
-
-    <main class="contenedor-principal">
-
-        <section class="presentacion" aria-labelledby="titulo-principal">
-
-            <div class="imagen-contenedor">
-
-                <img
-                    src="img/gimnasio.jpg"
-                    alt="Instalaciones y equipamiento de entrenamiento de Vértice Gym"
-                    class="imagen-gimnasio"
-                    fetchpriority="high"
-                >
-
-                <div class="imagen-contenido">
-
-                    <p class="etiqueta-presentacion">VÉRTICE GYM</p>
-
-                    <h1 id="titulo-principal">
-                        SUPERÁ TUS
-                        <span>LÍMITES.</span>
-                    </h1>
-
-                    <p>
-                        Tu esfuerzo construye tu mejor versión.
-                        Encontrá tu espacio, elegí tu ritmo y empezá a entrenar.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="presentacion-informacion">
-
-                <div class="informacion-texto">
-
-                    <p class="subtitulo-presentacion">MÁS QUE UN GIMNASIO</p>
-
-                    <h2>
-                        UN ESPACIO PARA
-                        <span>EVOLUCIONAR.</span>
-                    </h2>
-
-                    <p>
-                        En Vértice Gym creemos que cada persona tiene sus propios
-                        objetivos. Por eso ofrecemos diferentes formas de entrenar,
-                        mejorar tu condición física y disfrutar del movimiento.
-                    </p>
-
-                </div>
-
-                <div class="actividades">
-
-                    <article class="tarjeta-actividad">
-
-                        <span class="numero-actividad">01</span>
-
-                        <h3>MUSCULACIÓN</h3>
-
-                        <p>
-                            Desarrollá tu fuerza y trabajá cada grupo muscular
-                            con equipamiento de entrenamiento.
-                        </p>
-
-                    </article>
-
-                    <article class="tarjeta-actividad">
-
-                        <span class="numero-actividad">02</span>
-
-                        <h3>CARDIO</h3>
-
-                        <p>
-                            Mejorá tu resistencia y capacidad física mediante
-                            actividades cardiovasculares.
-                        </p>
-
-                    </article>
-
-                    <article class="tarjeta-actividad">
-
-                        <span class="numero-actividad">03</span>
-
-                        <h3>CLASES GRUPALES</h3>
-
-                        <p>
-                            Entrená acompañado y participá de actividades
-                            dinámicas junto a otras personas.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <aside class="sector-registro" aria-labelledby="titulo-registro">
-
-            <div class="formulario-contenedor">
-
-                <div class="formulario-encabezado">
-
-                    <p class="subtitulo-formulario">COMENZÁ HOY</p>
-
-                    <h2 id="titulo-registro">
-                        CREÁ TU CUENTA
-                    </h2>
-
-                    <p>
-                        Completá tus datos para formar parte de Vértice Gym.
-                    </p>
-
-                </div>
-
-                <form action="#" method="post">
-
-                    <fieldset>
-
-                        <legend>Información personal</legend>
-
-                        <div class="grupo-campos">
-
-                            <div class="campo">
-
-                                <label for="nombre">Nombre</label>
-
-                                <input
-                                    type="text"
-                                    id="nombre"
-                                    name="nombre"
-                                    placeholder="Tu nombre"
-                                    autocomplete="given-name"
-                                    minlength="2"
-                                    maxlength="50"
-                                    required
-                                >
-
-                            </div>
-
-                            <div class="campo">
-
-                                <label for="apellido">Apellido</label>
-
-                                <input
-                                    type="text"
-                                    id="apellido"
-                                    name="apellido"
-                                    placeholder="Tu apellido"
-                                    autocomplete="family-name"
-                                    minlength="2"
-                                    maxlength="50"
-                                    required
-                                >
-
-                            </div>
-
-                        </div>
-
-                        <div class="campo">
-
-                            <label for="fecha-nacimiento">Fecha de nacimiento</label>
-
-                            <input
-                                type="date"
-                                id="fecha-nacimiento"
-                                name="fecha_nacimiento"
-                                max="2026-11-13"
-                                autocomplete="bday"
-                                required
-                            >
-
-                        </div>
-
-                        <div class="campo">
-
-                            <label for="telefono">Teléfono</label>
-
-                            <input
-                                type="tel"
-                                id="telefono"
-                                name="telefono"
-                                placeholder="Ej. 388 1234567"
-                                autocomplete="tel"
-                                maxlength="20"
-                                required
-                            >
-
-                        </div>
-
-                    </fieldset>
-
-                    <fieldset>
-
-                        <legend>Datos de acceso</legend>
-
-                        <div class="campo">
-
-                            <label for="correo">Correo electrónico</label>
-
-                            <input
-                                type="email"
-                                id="correo"
-                                name="correo"
-                                placeholder="ejemplo@correo.com"
-                                autocomplete="email"
-                                maxlength="100"
-                                required
-                            >
-
-                        </div>
-
-                        <div class="campo">
-
-                            <label for="contrasena">Contraseña</label>
-
-                            <input
-                                type="password"
-                                id="contrasena"
-                                name="contrasena"
-                                placeholder="Creá una contraseña"
-                                autocomplete="new-password"
-                                minlength="8"
-                                maxlength="64"
-                                aria-describedby="ayuda-contrasena"
-                                required
-                            >
-
-                            <small id="ayuda-contrasena">
-                                Debe contener al menos 8 caracteres.
-                            </small>
-
-                        </div>
-
-                        <div class="campo">
-
-                            <label for="confirmar-contrasena">
-                                Confirmar contraseña
-                            </label>
-
-                            <input
-                                type="password"
-                                id="confirmar-contrasena"
-                                name="confirmar_contrasena"
-                                placeholder="Repetí tu contraseña"
-                                autocomplete="new-password"
-                                minlength="8"
-                                maxlength="64"
-                                required
-                            >
-
-                        </div>
-
-                    </fieldset>
-
-                    <div class="campo campo-terminos">
-
-                        <label for="terminos">
-
-                            <input
-                                type="checkbox"
-                                id="terminos"
-                                name="terminos"
-                                required
-                            >
-
-                            Acepto las condiciones de uso y la política de privacidad.
-
-                        </label>
-
-                    </div>
-
-                    <button type="submit" class="boton-registro">
-                        CREAR CUENTA
-                    </button>
-
-                    <p class="aviso-privacidad">
-                        Tus datos serán utilizados únicamente para gestionar
-                        tu cuenta de usuario.
-                    </p>
-
-                </form>
-
-                <div class="alternativa-ingreso">
-                    ¿Ya tenés una cuenta?
-                    <a href="login.html">INGRESÁ AQUÍ</a>
-                </div>
-
-            </div>
-
-        </aside>
-
-    </main>
-
-    <footer class="pie-pagina">
-
-        <a href="index.html" class="logo-pie">
-            VÉRTICE<span>.</span>
-        </a>
-
-        <p>ENTRENÁ A TU MANERA</p>
-
-        <p>
-            © 2026 VÉRTICE GYM. TODOS LOS DERECHOS RESERVADOS.
-        </p>
-
-    </footer>
-
+        <div class="field-row">
+          <div class="field">
+            <label for="nombre">NOMBRE</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="field">
+            <label for="apellido">APELLIDO</label>
+            <input id="apellido" name="apellido" type="text" placeholder="Tu apellido" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">CORREO ELECTRÓNICO</label>
+          <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="password">CONTRASEÑA</label>
+            <input id="password" name="password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
+          </div>
+          <div class="field">
+            <label for="confirmar">REPETIR CONTRASEÑA</label>
+            <input id="confirmar" name="confirmar" type="password" placeholder="Una vez más" required>
+          </div>
+        </div>
+
+        <label class="terms">
+          <input type="checkbox" name="terminos" required>
+          <span>Acepto los términos y condiciones de GAMEHUB.</span>
+        </label>
+
+        <button type="submit">UNIRME A GAMEHUB <span>↗</span></button>
+      </form>
+
+      <p class="login">¿YA TENÉS CUENTA? <a href="/login">INICIÁ SESIÓN ↗</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <span>GAMEHUB® COMMUNITY</span>
+    <span>HECHO PARA LOS QUE JUEGAN.</span>
+    <span>© 2026</span>
+  </footer>
 </body>
-
 </html>

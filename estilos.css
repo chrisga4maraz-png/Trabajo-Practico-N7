@@ -1,0 +1,183 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --paper: #eeeadd;
+  --ink: #191919;
+  --red: #f04427;
+  --blue: #3449d8;
+  --lime: #d4f15b;
+  --line: #c9c5b8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  padding: 0 6%;
+}
+
+.topbar {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--ink);
+}
+
+.logo {
+  font: 25px 'Archivo Black', sans-serif;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -2px;
+}
+.logo span { color: var(--red); }
+.logo sup { font: 10px 'DM Sans'; vertical-align: top; }
+
+.top-label, .back-link, .intro-meta, .overline,
+.field label, .login, footer {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.back-link { color: var(--ink); text-decoration: none; }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 9%;
+  padding: 65px 0 85px;
+}
+
+.intro { display: flex; flex-direction: column; }
+.intro-meta { display: flex; justify-content: space-between; }
+
+h1 {
+  font: clamp(76px, 11vw, 160px)/.83 'Archivo Black', sans-serif;
+  letter-spacing: -10px;
+  margin: 70px 0 38px;
+}
+h1 span { color: var(--red); }
+
+.intro-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-top: 2px solid var(--ink);
+  padding-top: 20px;
+}
+.intro-bottom p { font-size: 16px; line-height: 1.5; }
+
+.sticker {
+  background: var(--lime);
+  border: 2px solid var(--ink);
+  width: 116px;
+  height: 116px;
+  display: grid;
+  place-content: center;
+  transform: rotate(7deg);
+  font: 14px/1.1 'Archivo Black', sans-serif;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.sticker b { color: var(--red); }
+
+.signup {
+  background: #fffdf6;
+  padding: 34px;
+  border: 2px solid var(--ink);
+  box-shadow: 9px 9px 0 var(--blue);
+}
+
+.signup-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 35px;
+}
+.overline { color: var(--red); }
+
+h2 {
+  font: 46px/.95 'Archivo Black', sans-serif;
+  letter-spacing: -2px;
+  margin-top: 15px;
+}
+.asterisk { font-size: 48px; color: var(--red); }
+
+.field { display: flex; flex-direction: column; gap: 9px; margin-bottom: 22px; }
+.field label { font-size: 9px; }
+.field input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  padding: 12px 0;
+  outline: none;
+  font: 14px 'DM Sans', sans-serif;
+  color: var(--ink);
+  transition: border .2s;
+}
+.field input:focus { border-color: var(--blue); border-bottom-width: 2px; }
+.field input::placeholder { color: #aaa69b; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  margin: 8px 0 25px;
+  cursor: pointer;
+}
+.terms input { accent-color: var(--blue); width: 15px; height: 15px; }
+
+button {
+  width: 100%;
+  border: 2px solid var(--ink);
+  background: var(--red);
+  color: white;
+  padding: 18px;
+  font: 15px 'Archivo Black', sans-serif;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: .2s;
+}
+button:hover {
+  background: var(--blue);
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+button span { font-size: 20px; }
+
+.login { margin-top: 25px; font-size: 9px; }
+.login a { color: var(--blue); text-decoration: none; }
+
+footer {
+  border-top: 2px solid var(--ink);
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+}
+
+@media (max-width: 850px) {
+  main { grid-template-columns: 1fr; gap: 55px; }
+  h1 { margin: 45px 0 30px; }
+  .signup { max-width: 650px; width: 100%; }
+}
+
+@media (max-width: 500px) {
+  body { padding: 0 5%; }
+  .top-label { display: none; }
+  main { padding: 45px 0 65px; }
+  h1 { font-size: 82px; letter-spacing: -6px; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .signup { padding: 25px 20px; }
+  h2 { font-size: 39px; }
+  footer { gap: 12px; flex-wrap: wrap; }
+}
